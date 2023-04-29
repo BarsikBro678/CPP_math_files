@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int k, l; cin>>k>>l;
+    int score = 0;
+    cout<<k/l;
+    if(k % l != 0) cout<<".";
+    k = k%l*10;
+    while(k%l != 0){
+       cout<<k/l;
+       k = k%l*10;
+       score ++;
+       if(score == 5){
+           break;
+       }
+    }
+    cout<<k/l;
+    return 0;
+}
